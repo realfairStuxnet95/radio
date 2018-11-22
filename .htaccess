@@ -1,0 +1,17 @@
+# Turn Rewrite Engine On
+RewriteEngine on
+#DASHBOARD URLS
+RewriteRule ^dashboard$ index.php [NC,L]
+#END OF DASHBOARD URLS
+RewriteRule ^login$ access_system.php [NC,L]
+#ACCESS SYSTEM URLS
+RewriteRule ^register$ register_user.php [NC,L]
+
+#REGISTER AND LOGIN USER 
+RewriteRule ^register_user$ save/save_user.php [NC,L]
+RewriteRule ^login_user$ save/user_login.php [NC,L]
+#LOG OUT
+RewriteRule ^logout$ sign_out_user.php [NC,L]
+
+#UPLOAD SONG	
+RewriteRule ^upload_song$ upload_song_script.php [NC,L]
